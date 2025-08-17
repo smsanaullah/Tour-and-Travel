@@ -105,13 +105,7 @@
     color: #fff;
 }
 
-
-
-
-
-
-
-//Iftikerjahid css
+//iftikerjahid css
 
 .home{
     padding: 0;
@@ -138,3 +132,23 @@
     background: rgba(0,0,0,.3);
     z-index: 1;
 }
+
+
+.home .slide .content{
+    width: 85rem;
+    display: none;
+    position: relative;
+    z-index: 2;
+}
+
+.home .swiper-slide-active .content{
+    display: inline-block;
+}
+
+.home .slide .content span{
+    display: block;
+    font-size: 2.2rem;
+    color: var(--white);
+    padding-bottom: 1rem;
+    animation:fadeIn .2s linear backwards .2s;
+} 
