@@ -104,3 +104,37 @@
 .header .navbar .btn:hover{
     color: #fff;
 }
+
+
+
+
+
+
+
+//Iftikerjahid css
+
+.home{
+    padding: 0;
+}
+
+.home .slide{
+    text-align: left;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover !important;
+    background-position: center !important;
+    min-height: 60rem;
+    position: relative;
+}
+.home .slide::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.3);
+    z-index: 1;
+}
