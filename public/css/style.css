@@ -202,3 +202,18 @@
     gap: 1.5rem;
 }
 
+.services .box-container .box{
+    padding: 3rem 2rem;
+    text-align: center;
+    background: var(--main-color);
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.services .box-container .box:hover{
+    background: var(--black);
+}
+
+.services .box-container .box img{
+    height: 7rem;
+}
