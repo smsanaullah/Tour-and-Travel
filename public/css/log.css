@@ -1,0 +1,118 @@
+body {
+    background-image: url(../images/img-10.jpg);
+    background-size: cover;
+}
+
+
+.auth-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.auth-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth-container input[type="text"],
+.auth-container input[type="email"],
+.auth-container input[type="password"],
+.auth-container textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.auth-container input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.auth-container label {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.auth-container button {
+    padding: 10px 20px;
+    background-color: #229c26;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 90%;
+    max-width: 300px;
+}
+
+.auth-container button:hover {
+    background-color: #1b6d1f;
+}
+
+.auth-container a {
+    color: #065308;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.auth-container a:hover {
+    text-decoration: underline;
+}
+
+.auth-container .message {
+    margin: 10px 0;
+    color: red;
+}
+
+.auth-container, .dashboard-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(3, 164, 70, 0.377);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.auth-container h2, .dashboard-container h1 {
+    color: #333;
+}
+
+.auth-container input, .auth-container button {
+    width: 90%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.auth-container button, .dashboard-container .logout-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.auth-container button:hover, .dashboard-container .logout-button:hover {
+    background-color: #45a049;
+}
