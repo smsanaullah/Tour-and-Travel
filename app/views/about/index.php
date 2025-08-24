@@ -1,24 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cholo Ghurifiri</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+<?php if (session_status() === PHP_SESSION_NONE) session_start(); ?>
 
+<?php require_once __DIR__ . '/../layout/header.php'; ?>
 
-
-<div class="heading" style="background:url(images/img-12.jpg) no-repeat">
+<div class="heading" style="background:url(<?= BASE_URL ?>/images/img-12.jpg) no-repeat">
   <h1>about us</h1>
 </div>
 
 <section class="about">
   <div class="image">
-    <img src="images/about-img-1.jpg" alt="">
+    <img src="<?= BASE_URL ?>/images/about-img-1.jpg" alt="">
   </div>
   <div class="content">
     <h3>why choose us?</h3>
@@ -48,28 +38,35 @@
 
   <div class="swiper reviews-slider">
     <div class="swiper-wrapper">
+      <?php
+      
+      require_once __DIR__ . '/../../models/User.php';
 
-     
-      <div class="swiper-slide slide">
-        <div class="stars">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
+      $UserModel = new User();
+      $approvedReviews = $UserModel->getApprovedReviews();
+
+      foreach ($approvedReviews as $review): ?>
+        <div class="swiper-slide slide">
+          <div class="stars">
+            <?php for ($i = 0; $i < intval($review['rating']); $i++): ?>
+              <i class="fas fa-star"></i>
+            <?php endfor; ?>
+          </div>
+          <p><?= htmlspecialchars($review['review_text']) ?></p>
+          <h3><?= htmlspecialchars($review['name']) ?></h3>
+
+          <span>Traveler</span>
         </div>
-        <p>Sample review text here...</p>
-        <h3>John Doe</h3>
-        <span>Traveler</span>
-      </div>
-
+      <?php endforeach; ?>
     </div>
   </div>
 </section>
 
+<?php require_once __DIR__ . '/../layout/footer.php'; ?>
+
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="js/script.js"></script>
+<script src="<?= BASE_URL ?>/js/script.js"></script>
 
 </body>
 </html>
