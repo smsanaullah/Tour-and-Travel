@@ -1,2 +1,2 @@
 <?php
-define('BASE_URL', 'http://localhost/tour_travel_mvc/public');
+define('BASE_URL', 'http://localhost/Tour-and-Travel/public');
