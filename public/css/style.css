@@ -89,6 +89,21 @@ section{
     display: block;
 }
 
+.btn{
+    display: inline-block;
+    background: var(--black);
+    margin-top: 1rem;
+    color: var(--white);
+    font-size: 1.7rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.btn:hover{
+    background: var(--main-color);
+}
+
 .heading-title{
     text-align: center;
     margin-bottom: 3rem;
