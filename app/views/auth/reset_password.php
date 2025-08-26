@@ -3,22 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Reset Password</title>
-    <link rel="stylesheet" href="css/log.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>/css/log.css">
 </head>
 <body>
-    <div class="auth-container">
-        <h2>Reset Password</h2>
+<div class="auth-container">
+    <h2>Reset Password</h2>
 
-        
-        <p class="message" style="color:red; display:none;">Error message here</p>
-        <p class="message" style="color:green; display:none;">Success message here</p>
+    <?php if (!empty($error)) echo "<p class='message'>$error</p>"; ?>
+    <?php if (!empty($success)) echo "<p class='message' style='color:green;'>$success</p>"; ?>
 
-        
-        <form method="POST" action="handle_reset.html">
-            <input type="password" name="password" placeholder="New Password" required>
-            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
-            <button type="submit">Reset</button>
-        </form>
-    </div>
+    <form method="POST" action="<?= BASE_URL ?>/index.php?url=auth/handleReset">
+        <input type="password" name="password" placeholder="New Password" required>
+        <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+        <button type="submit">Reset</button>
+    </form>
+</div>
 </body>
 </html>
