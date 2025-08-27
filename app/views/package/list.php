@@ -1,3 +1,24 @@
+<?php include '../app/views/layout/header.php'; ?>
+
+<div class="heading" style="background:url(images/img-11.jpg) no-repeat">
+    <h1>packages</h1>
+</div>
+
+<section class="packages">
+<div class="package-header">
+
+        <div class="package-buttons">
+        <?php if (isset($_SESSION['admin'])) : ?>
+            <a href="#" class="btn">Create Packages</a>
+        <?php elseif (isset($_SESSION['customer_id'])) : ?>
+            <a href="#" class="btn">Existing Packages</a>
+            <a href="tour.php" class="btn">Customize Package</a>
+        <?php endif; ?>
+        </div>
+    <h1 class="heading-title">Top Destinations</h1>
+        
+</div>
+
 <div class="box-container">
         <div class="box">
             <div class="image">
