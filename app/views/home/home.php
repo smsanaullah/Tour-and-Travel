@@ -1,5 +1,5 @@
 <?php
-$base_url = '/tour_travel_mvc/public/';
+$base_url = '/Tour-and-Travel/public/';
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
