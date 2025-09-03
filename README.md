@@ -16,6 +16,6 @@ Responsive design using HTML, CSS, PHP
 
 Deployed online via InfinityFree
 
-🔹 Live Demo: Click Here
+🔹 Live Demo: https://cholo-ghurifiri.fwh.is
 
 🔹 Tech Stack: HTML, CSS, PHP, MySQL
